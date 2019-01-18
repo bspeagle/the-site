@@ -1,0 +1,10 @@
+/vendor
+.vscode
+/jenkins
+composer.lock
+composer.phar.1
+readme.md
+.gitattributes
+.gitignore
+phpunit.xml
+/terraform

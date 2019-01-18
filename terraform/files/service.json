@@ -1,0 +1,13 @@
+[
+    {
+        "name": "the-site",
+        "image": "367592122643.dkr.ecr.us-east-1.amazonaws.com/the-site:latest",
+        "cpu": 10,
+        "memory": 100,
+        "essential": true,
+        "portMappings": [{
+            "containerPort": 80,
+            "hostPort": 0
+        }]
+    }
+]

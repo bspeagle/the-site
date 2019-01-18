@@ -1,0 +1,21 @@
+.overlay {
+    background: black;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:opacity 5s ease;
+}
+
+.terminal_main {
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+}
+
+.terminal_logger {
+    border-radius: 10px;
+    height: 100px;
+}

@@ -1,18 +1,3 @@
-variable "app" {}
-variable "env" {}
-variable "vpc_id" {}
-variable "snELB1_id" {}
-variable "snELB2_id" {}
-variable "snAPP1_id" {}
-variable "snAPP2_id" {}
-variable "ec2sg_id" {}
-variable "lbsg_id" {}
-variable "ecsIAMrole_name" {}
-variable "ecsIAMtaskrole_arn" {}
-variable "ecsIAMsvcrole_arn" {}
-variable "ecsIAMrole_profile_name" {}
-variable "key_name" {}
-
 resource "aws_lb_target_group" "lb-tg-web" {
   name     = "${var.app}-TG-WEB-${var.env}"
   port     = 80
@@ -100,12 +85,4 @@ resource "aws_ecs_service" "qppDeploy" {
   }
 
   depends_on = ["aws_instance.ec2_A", "aws_lb.lb-web"]
-}
-
-output "lb-zoneId" {
-  value = "${aws_lb.lb-web.zone_id}"
-}
-
-output "lb-dns" {
-  value = "${aws_lb.lb-web.dns_name}"
 }

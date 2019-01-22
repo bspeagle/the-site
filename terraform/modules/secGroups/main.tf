@@ -1,8 +1,3 @@
-variable "app" {}
-variable "env" {}
-variable "vpc_id" {}
-
-
 resource "aws_security_group" "ec2sg" {
   name        = "${var.app}-EC2-SG-${var.env}"
   description = "SG for EC2 instances"
@@ -93,16 +88,4 @@ resource "aws_security_group" "lbsg" {
 //     App  = "${var.app}"
 //     Env  = "${var.env}"
 //   }
-// }
-
-output "lbsg_id" {
-  value = "${aws_security_group.lbsg.id}"
-}
-
-output "ec2sg_id" {
-  value = "${aws_security_group.ec2sg.id}"
-}
-
-// output "bastionsg_id" {
-//   value = "${aws_security_group.bastion_sg.id}"
 // }

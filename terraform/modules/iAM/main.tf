@@ -1,6 +1,3 @@
-variable "app" {}
-variable "env" {}
-
 resource "aws_iam_role" "ecsIAMrole" {
   name = "${var.app}_ecs_role-${var.env}"
 
@@ -159,20 +156,4 @@ EOF
 resource "aws_iam_instance_profile" "ecsIAMrole" {
   name  = "${var.app}-profile-${var.env}"
   role = "${aws_iam_role.ecsIAMrole.name}"
-}
-
-output "ecsIAMrole_name" {
-  value = "${aws_iam_role.ecsIAMrole.name}"
-}
-
-output "ecsIAMtaskrole_arn" {
-  value = "${aws_iam_role.ecsIAMtaskrole.arn}"
-}
-
-output "ecsIAMsvcrole_arn" {
-  value = "${aws_iam_role.ecsIAMsvcrole.arn}"
-}
-
-output "ecsIAMrole_profile_name" {
-  value = "${aws_iam_instance_profile.ecsIAMrole.name}"
 }

@@ -1,0 +1,14 @@
+variable "app" {}
+variable "env" {}
+variable "vpc_id" {}
+variable "snELB1_id" {}
+variable "snELB2_id" {}
+variable "snAPP1_id" {}
+variable "snAPP2_id" {}
+variable "ec2sg_id" {}
+variable "lbsg_id" {}
+variable "ecsIAMrole_name" {}
+variable "ecsIAMtaskrole_arn" {}
+variable "ecsIAMsvcrole_arn" {}
+variable "ecsIAMrole_profile_name" {}
+variable "key_name" {}

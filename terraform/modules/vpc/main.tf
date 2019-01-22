@@ -1,7 +1,3 @@
-variable "app" {}
-variable "env" {}
-
-
 resource "aws_vpc" "vpc" {
   cidr_block = "10.0.0.0/16"
 
@@ -143,24 +139,4 @@ resource "aws_route_table_association" "rta-C" {
 resource "aws_route_table_association" "rta-D" {
   subnet_id      = "${aws_subnet.snAPP2.id}"
   route_table_id = "${aws_route_table.routeTable-PRVT.id}"
-}
-
-output "vpc_id" {
-  value = "${aws_vpc.vpc.id}"
-}
-
-output "snELB1_id" {
-  value = "${aws_subnet.snELB1.id}"
-}
-
-output "snELB2_id" {
-  value = "${aws_subnet.snELB2.id}"
-}
-
-output "snAPP1_id" {
-  value = "${aws_subnet.snAPP1.id}"
-}
-
-output "snAPP2_id" {
-  value = "${aws_subnet.snAPP2.id}"
 }

@@ -66,11 +66,11 @@ module "route53" {
   lb-dns = "${module.ecs.lb-dns}"
 }
 
-module "bastion" {
-  source = "../modules/bastion"
-  app = "${var.app}"
-  env = "${var.env}"
-  snELB1_id = "${module.vpc.snELB1_id}"
-  bastionsg_id = "${module.secGroups.bastionsg_id}"
-  key_name = "${var.key_name}"
-}
+// module "bastion" {
+//   source = "../modules/bastion"
+//   app = "${var.app}"
+//   env = "${var.env}"
+//   snELB1_id = "${module.vpc.snELB1_id}"
+//   bastionsg_id = "${module.secGroups.bastionsg_id}"
+//   key_name = "${var.key_name}"
+// }

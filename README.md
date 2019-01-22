@@ -3,7 +3,7 @@ BSPEAGLE.com
 
 Nothing terribly exciting here folks. Calm down. 
 
-The site is a Laravel project and main page uses as jQuery library (https://terminal.jcubic.pl/) for emulating a terminal in browser.
+The site is a Laravel project and main page uses a jQuery library (https://terminal.jcubic.pl/) for emulating a terminal in browser.
 
 The infrastructure is managed by Terraform and creates an ECS cluster off a single EC2 instance. There's also Jenkins deployment pipelines and docker files.
 

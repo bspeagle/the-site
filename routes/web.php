@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/airhorn', 'AirHornController@index')->name('airhorn');
+
+Route::get('/dantastic', 'DantasticController@index')->name('dantastic');
